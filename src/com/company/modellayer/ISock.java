@@ -19,4 +19,7 @@ public interface ISock {
     String getType();
 
     void setType(String value);
+
+    int getFieldsCount();
+    String getFieldByIndex(int index);
 }

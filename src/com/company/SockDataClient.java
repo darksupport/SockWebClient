@@ -37,6 +37,10 @@ public class SockDataClient extends SockData implements ISock {
         if (null != owner) {
             sb.append("|" + this.owner.getName());
         }
+        else
+        {
+            sb.append("|");
+        }
         return  sb.toString();
     }
 
@@ -47,5 +51,23 @@ public class SockDataClient extends SockData implements ISock {
            result.add(new SockDataClient(sock));
         }
         return result;
+    }
+    @Override
+    public String getFieldByIndex(int index)
+    {
+        String[] elements = this.toString().split("\\|");
+        try {
+            return elements[index];
+        }
+        catch (IndexOutOfBoundsException ex)
+        {
+            return "";
+        }
+    }
+    @Override
+    public int getFieldsCount()
+    {
+        String[] elements = this.toString().split("|");
+        return elements.length;
     }
 }
