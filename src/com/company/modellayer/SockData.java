@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="color" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="owner" type="{http://ModelLayer.company.com/}ownerData" minOccurs="0"/>
  *         &lt;element name="size" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="type" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="type" type="{http://ModelLayer.company.com/}sockType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -40,7 +40,7 @@ public class SockData {
     protected String color;
     protected OwnerData owner;
     protected int size;
-    protected String type;
+    protected SockType type;
 
     /**
      * Gets the value of the color property.
@@ -111,10 +111,10 @@ public class SockData {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link SockType }
      *     
      */
-    public String getType() {
+    public SockType getType() {
         return type;
     }
 
@@ -123,10 +123,10 @@ public class SockData {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link SockType }
      *     
      */
-    public void setType(String value) {
+    public void setType(SockType value) {
         this.type = value;
     }
 

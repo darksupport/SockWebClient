@@ -24,20 +24,14 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _FindBy_QNAME = new QName("http://ModelLayer.company.com/", "findBy");
-    private final static QName _GetAllSocks_QNAME = new QName("http://ModelLayer.company.com/", "getAllSocks");
-    private final static QName _GetSockByCondition_QNAME = new QName("http://ModelLayer.company.com/", "getSockByCondition");
-    private final static QName _GetAllSocksResponse_QNAME = new QName("http://ModelLayer.company.com/", "getAllSocksResponse");
-    private final static QName _DeleteSockResponse_QNAME = new QName("http://ModelLayer.company.com/", "deleteSockResponse");
-    private final static QName _UpdateSock_QNAME = new QName("http://ModelLayer.company.com/", "updateSock");
-    private final static QName _AddSock_QNAME = new QName("http://ModelLayer.company.com/", "addSock");
-    private final static QName _AddSockResponse_QNAME = new QName("http://ModelLayer.company.com/", "addSockResponse");
-    private final static QName _UpdateSockResponse_QNAME = new QName("http://ModelLayer.company.com/", "updateSockResponse");
-    private final static QName _FindByResponse_QNAME = new QName("http://ModelLayer.company.com/", "findByResponse");
-    private final static QName _GetSockById_QNAME = new QName("http://ModelLayer.company.com/", "getSockById");
-    private final static QName _GetSockByConditionResponse_QNAME = new QName("http://ModelLayer.company.com/", "getSockByConditionResponse");
-    private final static QName _GetSockByIdResponse_QNAME = new QName("http://ModelLayer.company.com/", "getSockByIdResponse");
-    private final static QName _DeleteSock_QNAME = new QName("http://ModelLayer.company.com/", "deleteSock");
+    private final static QName _GetAllSockTypesResponse_QNAME = new QName("http://ModelLayer.company.com/", "getAllSockTypesResponse");
+    private final static QName _GetAllSockTypes_QNAME = new QName("http://ModelLayer.company.com/", "getAllSockTypes");
+    private final static QName _AddSockType_QNAME = new QName("http://ModelLayer.company.com/", "addSockType");
+    private final static QName _DeleteSockTypeResponse_QNAME = new QName("http://ModelLayer.company.com/", "deleteSockTypeResponse");
+    private final static QName _DeleteSockType_QNAME = new QName("http://ModelLayer.company.com/", "deleteSockType");
+    private final static QName _UpdateSockType_QNAME = new QName("http://ModelLayer.company.com/", "updateSockType");
+    private final static QName _UpdateSockTypeResponse_QNAME = new QName("http://ModelLayer.company.com/", "updateSockTypeResponse");
+    private final static QName _AddSockTypeResponse_QNAME = new QName("http://ModelLayer.company.com/", "addSockTypeResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.company.modellayer
@@ -47,257 +41,147 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetSockByConditionResponse }
+     * Create an instance of {@link DeleteSockType }
      * 
      */
-    public GetSockByConditionResponse createGetSockByConditionResponse() {
-        return new GetSockByConditionResponse();
+    public DeleteSockType createDeleteSockType() {
+        return new DeleteSockType();
     }
 
     /**
-     * Create an instance of {@link DeleteSock }
+     * Create an instance of {@link AddSockTypeResponse }
      * 
      */
-    public DeleteSock createDeleteSock() {
-        return new DeleteSock();
+    public AddSockTypeResponse createAddSockTypeResponse() {
+        return new AddSockTypeResponse();
     }
 
     /**
-     * Create an instance of {@link GetSockByIdResponse }
+     * Create an instance of {@link UpdateSockType }
      * 
      */
-    public GetSockByIdResponse createGetSockByIdResponse() {
-        return new GetSockByIdResponse();
+    public UpdateSockType createUpdateSockType() {
+        return new UpdateSockType();
     }
 
     /**
-     * Create an instance of {@link GetSockById }
+     * Create an instance of {@link UpdateSockTypeResponse }
      * 
      */
-    public GetSockById createGetSockById() {
-        return new GetSockById();
+    public UpdateSockTypeResponse createUpdateSockTypeResponse() {
+        return new UpdateSockTypeResponse();
     }
 
     /**
-     * Create an instance of {@link AddSock }
+     * Create an instance of {@link GetAllSockTypes }
      * 
      */
-    public AddSock createAddSock() {
-        return new AddSock();
+    public GetAllSockTypes createGetAllSockTypes() {
+        return new GetAllSockTypes();
     }
 
     /**
-     * Create an instance of {@link FindByResponse }
+     * Create an instance of {@link DeleteSockTypeResponse }
      * 
      */
-    public FindByResponse createFindByResponse() {
-        return new FindByResponse();
+    public DeleteSockTypeResponse createDeleteSockTypeResponse() {
+        return new DeleteSockTypeResponse();
     }
 
     /**
-     * Create an instance of {@link AddSockResponse }
+     * Create an instance of {@link AddSockType }
      * 
      */
-    public AddSockResponse createAddSockResponse() {
-        return new AddSockResponse();
+    public AddSockType createAddSockType() {
+        return new AddSockType();
     }
 
     /**
-     * Create an instance of {@link UpdateSockResponse }
+     * Create an instance of {@link GetAllSockTypesResponse }
      * 
      */
-    public UpdateSockResponse createUpdateSockResponse() {
-        return new UpdateSockResponse();
+    public GetAllSockTypesResponse createGetAllSockTypesResponse() {
+        return new GetAllSockTypesResponse();
     }
 
     /**
-     * Create an instance of {@link DeleteSockResponse }
+     * Create an instance of {@link SockType }
      * 
      */
-    public DeleteSockResponse createDeleteSockResponse() {
-        return new DeleteSockResponse();
+    public SockType createSockType() {
+        return new SockType();
     }
 
     /**
-     * Create an instance of {@link UpdateSock }
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllSockTypesResponse }{@code >}}
      * 
      */
-    public UpdateSock createUpdateSock() {
-        return new UpdateSock();
+    @XmlElementDecl(namespace = "http://ModelLayer.company.com/", name = "getAllSockTypesResponse")
+    public JAXBElement<GetAllSockTypesResponse> createGetAllSockTypesResponse(GetAllSockTypesResponse value) {
+        return new JAXBElement<GetAllSockTypesResponse>(_GetAllSockTypesResponse_QNAME, GetAllSockTypesResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link GetAllSocksResponse }
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllSockTypes }{@code >}}
      * 
      */
-    public GetAllSocksResponse createGetAllSocksResponse() {
-        return new GetAllSocksResponse();
+    @XmlElementDecl(namespace = "http://ModelLayer.company.com/", name = "getAllSockTypes")
+    public JAXBElement<GetAllSockTypes> createGetAllSockTypes(GetAllSockTypes value) {
+        return new JAXBElement<GetAllSockTypes>(_GetAllSockTypes_QNAME, GetAllSockTypes.class, null, value);
     }
 
     /**
-     * Create an instance of {@link FindBy }
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddSockType }{@code >}}
      * 
      */
-    public FindBy createFindBy() {
-        return new FindBy();
+    @XmlElementDecl(namespace = "http://ModelLayer.company.com/", name = "addSockType")
+    public JAXBElement<AddSockType> createAddSockType(AddSockType value) {
+        return new JAXBElement<AddSockType>(_AddSockType_QNAME, AddSockType.class, null, value);
     }
 
     /**
-     * Create an instance of {@link GetAllSocks }
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteSockTypeResponse }{@code >}}
      * 
      */
-    public GetAllSocks createGetAllSocks() {
-        return new GetAllSocks();
+    @XmlElementDecl(namespace = "http://ModelLayer.company.com/", name = "deleteSockTypeResponse")
+    public JAXBElement<DeleteSockTypeResponse> createDeleteSockTypeResponse(DeleteSockTypeResponse value) {
+        return new JAXBElement<DeleteSockTypeResponse>(_DeleteSockTypeResponse_QNAME, DeleteSockTypeResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link GetSockByCondition }
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteSockType }{@code >}}
      * 
      */
-    public GetSockByCondition createGetSockByCondition() {
-        return new GetSockByCondition();
+    @XmlElementDecl(namespace = "http://ModelLayer.company.com/", name = "deleteSockType")
+    public JAXBElement<DeleteSockType> createDeleteSockType(DeleteSockType value) {
+        return new JAXBElement<DeleteSockType>(_DeleteSockType_QNAME, DeleteSockType.class, null, value);
     }
 
     /**
-     * Create an instance of {@link SockData }
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateSockType }{@code >}}
      * 
      */
-    public SockData createSockData() {
-        return new SockData();
+    @XmlElementDecl(namespace = "http://ModelLayer.company.com/", name = "updateSockType")
+    public JAXBElement<UpdateSockType> createUpdateSockType(UpdateSockType value) {
+        return new JAXBElement<UpdateSockType>(_UpdateSockType_QNAME, UpdateSockType.class, null, value);
     }
 
     /**
-     * Create an instance of {@link OwnerData }
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateSockTypeResponse }{@code >}}
      * 
      */
-    public OwnerData createOwnerData() {
-        return new OwnerData();
+    @XmlElementDecl(namespace = "http://ModelLayer.company.com/", name = "updateSockTypeResponse")
+    public JAXBElement<UpdateSockTypeResponse> createUpdateSockTypeResponse(UpdateSockTypeResponse value) {
+        return new JAXBElement<UpdateSockTypeResponse>(_UpdateSockTypeResponse_QNAME, UpdateSockTypeResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FindBy }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddSockTypeResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://ModelLayer.company.com/", name = "findBy")
-    public JAXBElement<FindBy> createFindBy(FindBy value) {
-        return new JAXBElement<FindBy>(_FindBy_QNAME, FindBy.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllSocks }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ModelLayer.company.com/", name = "getAllSocks")
-    public JAXBElement<GetAllSocks> createGetAllSocks(GetAllSocks value) {
-        return new JAXBElement<GetAllSocks>(_GetAllSocks_QNAME, GetAllSocks.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSockByCondition }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ModelLayer.company.com/", name = "getSockByCondition")
-    public JAXBElement<GetSockByCondition> createGetSockByCondition(GetSockByCondition value) {
-        return new JAXBElement<GetSockByCondition>(_GetSockByCondition_QNAME, GetSockByCondition.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllSocksResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ModelLayer.company.com/", name = "getAllSocksResponse")
-    public JAXBElement<GetAllSocksResponse> createGetAllSocksResponse(GetAllSocksResponse value) {
-        return new JAXBElement<GetAllSocksResponse>(_GetAllSocksResponse_QNAME, GetAllSocksResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteSockResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ModelLayer.company.com/", name = "deleteSockResponse")
-    public JAXBElement<DeleteSockResponse> createDeleteSockResponse(DeleteSockResponse value) {
-        return new JAXBElement<DeleteSockResponse>(_DeleteSockResponse_QNAME, DeleteSockResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateSock }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ModelLayer.company.com/", name = "updateSock")
-    public JAXBElement<UpdateSock> createUpdateSock(UpdateSock value) {
-        return new JAXBElement<UpdateSock>(_UpdateSock_QNAME, UpdateSock.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddSock }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ModelLayer.company.com/", name = "addSock")
-    public JAXBElement<AddSock> createAddSock(AddSock value) {
-        return new JAXBElement<AddSock>(_AddSock_QNAME, AddSock.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddSockResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ModelLayer.company.com/", name = "addSockResponse")
-    public JAXBElement<AddSockResponse> createAddSockResponse(AddSockResponse value) {
-        return new JAXBElement<AddSockResponse>(_AddSockResponse_QNAME, AddSockResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateSockResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ModelLayer.company.com/", name = "updateSockResponse")
-    public JAXBElement<UpdateSockResponse> createUpdateSockResponse(UpdateSockResponse value) {
-        return new JAXBElement<UpdateSockResponse>(_UpdateSockResponse_QNAME, UpdateSockResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FindByResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ModelLayer.company.com/", name = "findByResponse")
-    public JAXBElement<FindByResponse> createFindByResponse(FindByResponse value) {
-        return new JAXBElement<FindByResponse>(_FindByResponse_QNAME, FindByResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSockById }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ModelLayer.company.com/", name = "getSockById")
-    public JAXBElement<GetSockById> createGetSockById(GetSockById value) {
-        return new JAXBElement<GetSockById>(_GetSockById_QNAME, GetSockById.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSockByConditionResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ModelLayer.company.com/", name = "getSockByConditionResponse")
-    public JAXBElement<GetSockByConditionResponse> createGetSockByConditionResponse(GetSockByConditionResponse value) {
-        return new JAXBElement<GetSockByConditionResponse>(_GetSockByConditionResponse_QNAME, GetSockByConditionResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSockByIdResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ModelLayer.company.com/", name = "getSockByIdResponse")
-    public JAXBElement<GetSockByIdResponse> createGetSockByIdResponse(GetSockByIdResponse value) {
-        return new JAXBElement<GetSockByIdResponse>(_GetSockByIdResponse_QNAME, GetSockByIdResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteSock }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ModelLayer.company.com/", name = "deleteSock")
-    public JAXBElement<DeleteSock> createDeleteSock(DeleteSock value) {
-        return new JAXBElement<DeleteSock>(_DeleteSock_QNAME, DeleteSock.class, null, value);
+    @XmlElementDecl(namespace = "http://ModelLayer.company.com/", name = "addSockTypeResponse")
+    public JAXBElement<AddSockTypeResponse> createAddSockTypeResponse(AddSockTypeResponse value) {
+        return new JAXBElement<AddSockTypeResponse>(_AddSockTypeResponse_QNAME, AddSockTypeResponse.class, null, value);
     }
 
 }

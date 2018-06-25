@@ -3,6 +3,7 @@ package com.company.SwingUILayer;
 import com.company.SockDataClient;
 import com.company.modellayer.ISock;
 import com.company.modellayer.ISockModel;
+import com.company.modellayer.socktypemodel.SockTypeModelService;
 
 import javax.swing.*;
 import java.awt.*;
@@ -25,6 +26,7 @@ public class SockDataView {
     private JTextField tfColor;
     private JSpinner spSize;
     private JTextField tfOwner;
+    private JButton Types;
     private ISockModel model;
 
 
@@ -48,7 +50,18 @@ public class SockDataView {
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
                 ISock selected = allData.get(SockDataTable.getSelectedRow());
-                tfType.setText( selected.getType());
+                tfType.setText( selected.getType().getSockTypeName());
+            }
+        });
+        Types.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame frame = new JFrame("SockTypes");
+                SockTypeModelService service = new SockTypeModelService();
+                frame.setContentPane(new SockTypeView(service.getSockTypeModelPort()).sockTypePane);
+                frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
             }
         });
     }

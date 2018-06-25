@@ -35,7 +35,7 @@ public class ConsoleSock implements IUISock {
         ISock result = new SockDataClient();
         System.out.println("Please enter new sockData.");
         System.out.print("Type: ");
-        result.setType(validateAndReenter("type", scn.nextLine()));
+        //result.setType(validateAndReenter("type", scn.nextLine()));
         System.out.print("Size: ");
         result.setSize(Integer.parseInt(validateAndReenter("size", scn.nextLine())));
         System.out.print("Color: ");
@@ -93,7 +93,7 @@ public class ConsoleSock implements IUISock {
                 return sock;
             }
             if (fieldIndex == 1) {
-                sock.setType(newValue);
+                //sock.setType(newValue);
             }
             if (fieldIndex == 2) {
                 sock.setColor(newValue);

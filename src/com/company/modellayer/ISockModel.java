@@ -27,6 +27,42 @@ public interface ISockModel {
 
     /**
      * 
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns java.util.List<com.company.modellayer.SockData>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getSockByCondition", targetNamespace = "http://ModelLayer.company.com/", className = "com.company.modellayer.GetSockByCondition")
+    @ResponseWrapper(localName = "getSockByConditionResponse", targetNamespace = "http://ModelLayer.company.com/", className = "com.company.modellayer.GetSockByConditionResponse")
+    @Action(input = "http://ModelLayer.company.com/ISockModel/getSockByConditionRequest", output = "http://ModelLayer.company.com/ISockModel/getSockByConditionResponse")
+    public List<SockData> getSockByCondition(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        String arg1,
+        @WebParam(name = "arg2", targetNamespace = "")
+        String arg2);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns com.company.modellayer.SockData
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "updateSock", targetNamespace = "http://ModelLayer.company.com/", className = "com.company.modellayer.UpdateSock")
+    @ResponseWrapper(localName = "updateSockResponse", targetNamespace = "http://ModelLayer.company.com/", className = "com.company.modellayer.UpdateSockResponse")
+    @Action(input = "http://ModelLayer.company.com/ISockModel/updateSockRequest", output = "http://ModelLayer.company.com/ISockModel/updateSockResponse")
+    public SockData updateSock(
+        @WebParam(name = "arg0", targetNamespace = "")
+        SockData arg0);
+
+    /**
+     * 
      * @param arg0
      */
     @WebMethod
@@ -60,60 +96,12 @@ public interface ISockModel {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "updateSock", targetNamespace = "http://ModelLayer.company.com/", className = "com.company.modellayer.UpdateSock")
-    @ResponseWrapper(localName = "updateSockResponse", targetNamespace = "http://ModelLayer.company.com/", className = "com.company.modellayer.UpdateSockResponse")
-    @Action(input = "http://ModelLayer.company.com/ISockModel/updateSockRequest", output = "http://ModelLayer.company.com/ISockModel/updateSockResponse")
-    public SockData updateSock(
-        @WebParam(name = "arg0", targetNamespace = "")
-        SockData arg0);
-
-    /**
-     * 
-     * @param arg2
-     * @param arg1
-     * @param arg0
-     * @return
-     *     returns java.util.List<com.company.modellayer.SockData>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getSockByCondition", targetNamespace = "http://ModelLayer.company.com/", className = "com.company.modellayer.GetSockByCondition")
-    @ResponseWrapper(localName = "getSockByConditionResponse", targetNamespace = "http://ModelLayer.company.com/", className = "com.company.modellayer.GetSockByConditionResponse")
-    @Action(input = "http://ModelLayer.company.com/ISockModel/getSockByConditionRequest", output = "http://ModelLayer.company.com/ISockModel/getSockByConditionResponse")
-    public List<SockData> getSockByCondition(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        String arg1,
-        @WebParam(name = "arg2", targetNamespace = "")
-        String arg2);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns com.company.modellayer.SockData
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
     @RequestWrapper(localName = "getSockById", targetNamespace = "http://ModelLayer.company.com/", className = "com.company.modellayer.GetSockById")
     @ResponseWrapper(localName = "getSockByIdResponse", targetNamespace = "http://ModelLayer.company.com/", className = "com.company.modellayer.GetSockByIdResponse")
     @Action(input = "http://ModelLayer.company.com/ISockModel/getSockByIdRequest", output = "http://ModelLayer.company.com/ISockModel/getSockByIdResponse")
     public SockData getSockById(
         @WebParam(name = "arg0", targetNamespace = "")
         int arg0);
-
-    /**
-     * 
-     * @return
-     *     returns java.util.List<com.company.modellayer.SockData>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getAllSocks", targetNamespace = "http://ModelLayer.company.com/", className = "com.company.modellayer.GetAllSocks")
-    @ResponseWrapper(localName = "getAllSocksResponse", targetNamespace = "http://ModelLayer.company.com/", className = "com.company.modellayer.GetAllSocksResponse")
-    @Action(input = "http://ModelLayer.company.com/ISockModel/getAllSocksRequest", output = "http://ModelLayer.company.com/ISockModel/getAllSocksResponse")
-    public List<SockData> getAllSocks();
 
     /**
      * 
@@ -132,5 +120,17 @@ public interface ISockModel {
         Object arg0,
         @WebParam(name = "arg1", targetNamespace = "")
         String arg1);
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<com.company.modellayer.SockData>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getAllSocks", targetNamespace = "http://ModelLayer.company.com/", className = "com.company.modellayer.GetAllSocks")
+    @ResponseWrapper(localName = "getAllSocksResponse", targetNamespace = "http://ModelLayer.company.com/", className = "com.company.modellayer.GetAllSocksResponse")
+    @Action(input = "http://ModelLayer.company.com/ISockModel/getAllSocksRequest", output = "http://ModelLayer.company.com/ISockModel/getAllSocksResponse")
+    public List<SockData> getAllSocks();
 
 }

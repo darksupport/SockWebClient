@@ -2,6 +2,7 @@ package com.company;
 
 import com.company.modellayer.ISock;
 import com.company.modellayer.SockData;
+import com.company.modellayer.SockType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +23,7 @@ public class SockDataClient extends SockData implements ISock {
     public SockDataClient()
     {
         this.color = "";
-        this.type = "";
+        this.type = new SockType();
         this.owner = null;
         this.size = -1;
     }
@@ -64,6 +65,9 @@ public class SockDataClient extends SockData implements ISock {
             return "";
         }
     }
+
+
+
     @Override
     public int getFieldsCount()
     {
